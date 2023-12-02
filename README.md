@@ -1,4 +1,4 @@
-# stress-test-cxl
+# CXL Stress Tester
 **Build instructions:**
 
 mkdir build
