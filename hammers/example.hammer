@@ -1,0 +1,11 @@
+# number of target list = num-addr-incr*num-sets
+--define-target --id=0 --node=0 --addr-start=0x0 --num-sets=3 --set-offset-incr=0x1000 --num-addr-incr=5 --addr-incr=0x4
+# type=core: selected CPU to run algorithm.
+# hwid: cpu id
+# offset: byte offset to write in the cache-line.
+# size: byte-size operation for algorithm selected.
+--define-thread --type=core --hwid=57 --algorithm=MulWr --algo-params=0x2120 --offset=0 --size=4 --pattern=0xcacabebe --patternsize=4 --setloops=100 --patternparam=0 --cachealigned=0 --protocol=2 --target=0
+#--define-thread --type=core --hwid=3 --algorithm=MulWr --algo-params=0x2120 --offset=60 --size=4 --pattern=0xdeadbeef --patternsize=4 --setloops=100 --patternparam=0 --cachealigned=0 --protocol=2 --target=0
+--define-thread --type=device --hwid=56 --algorithm=MulWr --algo-params=0x13 --offset=16 --size=4 --pattern=0xa1b2c3d4 --patternsize=4 --setloops=0 --patternparam=1 --cachealigned=1 --protocol=2 --target=0
+#--define-thread --type=device --hwid=168 --algorithm=MulWr --algo-params=0x13 --offset=25 --size=4 --pattern=0xcafecafe --patternsize=4 --setloops=0 --patternparam=1 --cachealigned=1 --protocol=2 --target=0
+
